@@ -11,6 +11,7 @@ use bevy_ecs::{
 };
 use bevy_math::{Mat4, Size};
 use bevy_reflect::TypeUuid;
+use bevy_render::texture::DEFAULT_DEPTH_FORMAT;
 use bevy_render::{
     mesh::{
         skinning::{SkinnedMesh, SkinnedMeshInverseBindposes},
@@ -633,7 +634,7 @@ impl SpecializedMeshPipeline for MeshPipeline {
                 strip_index_format: None,
             },
             depth_stencil: Some(DepthStencilState {
-                format: TextureFormat::Depth32Float,
+                format: DEFAULT_DEPTH_FORMAT,
                 depth_write_enabled,
                 depth_compare: CompareFunction::Greater,
                 stencil: StencilState {
