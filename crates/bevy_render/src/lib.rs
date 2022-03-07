@@ -29,7 +29,7 @@ pub mod prelude {
     };
 }
 
-use bevy_utils::tracing::{debug, info};
+use bevy_utils::tracing::debug;
 pub use once_cell;
 
 use crate::{
