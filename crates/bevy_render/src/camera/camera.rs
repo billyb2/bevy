@@ -343,5 +343,5 @@ pub fn extract_cameras<M: Component + Default>(
         }
     }
 
-    commands.insert_resource(active_camera.clone())
+    commands.insert_resource(active_camera.clone());
 }

@@ -1048,7 +1048,7 @@ fn resolve_node_hierarchy(
                     |parent| {
                         *parent = Some(i);
                     },
-                )
+                );
             }
             let children = children.into_iter().collect::<HashSet<_>>();
             if children.is_empty() {
