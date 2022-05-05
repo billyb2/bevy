@@ -1,3 +1,4 @@
+#![allow(clippy::match_same_arms)]
 use bevy::{
     prelude::*,
     reflect::{DynamicList, ReflectRef},

@@ -861,8 +861,7 @@ impl ReflectAttrs {
                                             }
                                         }
                                     }
-                                    Meta::List(_) => {}
-                                    Meta::NameValue(_) => {}
+                                    Meta::List(_) | Meta::NameValue(_) => {}
                                 },
                                 NestedMeta::Lit(_) => {}
                             }
