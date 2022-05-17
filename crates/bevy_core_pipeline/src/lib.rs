@@ -418,7 +418,6 @@ pub fn prepare_core_views_system(
                                                           * bit depth for better performance */
                     usage: TextureUsages::RENDER_ATTACHMENT,
                 },
-<<<<<<< HEAD
             )
         };
         let cached_texture = if let Some(camera) = camera {
@@ -429,15 +428,7 @@ pub fn prepare_core_views_system(
         } else {
             get_cached_texture()
         };
-=======
-                mip_level_count: 1,
-                sample_count: msaa.samples,
-                dimension: TextureDimension::D2,
-                format: DEFAULT_DEPTH_FORMAT,
-                usage: TextureUsages::RENDER_ATTACHMENT,
-            },
-        );
->>>>>>> 9780e283 (Android Fix Attempt)
+
         commands.entity(entity).insert(ViewDepthTexture {
             texture: cached_texture.texture,
             view: cached_texture.default_view,
